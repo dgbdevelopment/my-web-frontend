@@ -1,0 +1,51 @@
+.toggle-menu {
+  height: 40px;
+  width: 40px;
+  &__icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+
+  & .first-bar,
+  & .second-bar,
+  & .third-bar {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: $text-color;
+    border-radius: 5px;
+    margin-left: 5px;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+
+  & .first-bar {
+    top: 9px;
+  }
+  & .second-bar {
+    top: 19px;
+  }
+  & .third-bar {
+    top: 29px;
+  }
+
+  & .show .first-bar {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 18px;
+  }
+  & .show .third-bar {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 18px;
+  }
+
+  & .show .second-bar {
+    opacity: 0;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}

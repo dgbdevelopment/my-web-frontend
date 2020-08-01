@@ -1,0 +1,18 @@
+extends ../templates/template
+block topbar
+  -locals.pageActive='inicio'
+  include ../includes/topbar
+block main
+  .hero
+    .hero__img
+      .hero__content
+        .hero__logo
+          include ../includes/animated-logo.html
+        .hero__card
+          h1.hero__title
+            span(data-text="Hola, soy ").typewritter
+            span(data-text="David").primary.typewritter
+          h2.hero__text
+            span(data-text="Desarrollador web frontend   ").typewritter
+          a.hero__button Sobre mí
+

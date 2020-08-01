@@ -1,0 +1,27 @@
+.topbar-container
+  .topbar
+    a(href="/").topbar__logo-container
+      .topbar__logo
+        img(src="assets/img/Logo2-Blanco-con-borde.svg", alt="Logo DGB Development").topbar__img
+      .topbar__company DGB Development
+    nav.nav
+      #marker
+      ul.main-menu
+        each page, index in locals.pages
+          if (page == locals.pageActive)
+            li.main-menu__item
+              if index==0
+                a(href=`./index.html`).main-menu__link.main-menu__link--active= `${page.charAt(0).toUpperCase()}${page.substring(1)}`
+              else
+                a(href=`./${page}.html`).main-menu__link.main-menu__link--active= `${page.charAt(0).toUpperCase()}${page.substring(1)}`
+          else
+            li.main-menu__item
+              if index==0
+                a(href=`./index.html`).main-menu__link= `${page.charAt(0).toUpperCase()}${page.substring(1)}`
+              else
+                a(href=`./${page}.html`).main-menu__link= `${page.charAt(0).toUpperCase()}${page.substring(1)}`
+    .toggle-menu
+      #toggle-menu.toggle-menu__icon
+        .first-bar
+        .second-bar
+        .third-bar
