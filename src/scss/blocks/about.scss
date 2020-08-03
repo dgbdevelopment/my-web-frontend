@@ -1,0 +1,152 @@
+.about {
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 95%;
+  min-height: calc(100vh - 4rem);
+  display: grid;
+  grid-template-rows: auto auto 80vh 35vh 35vh 35vh;
+  gap: 2rem 2rem;
+  grid-template-areas: "me" "title" "frontend" "backend" "tools" "games";
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    gap: 2rem 2rem;
+    grid-template-areas: "me title title" "me frontend backend" "me frontend tools" "me frontend games";
+  }
+}
+
+.about__me {
+  grid-area: me;
+}
+.about__backend {
+  grid-area: backend;
+}
+.about__games {
+  grid-area: games;
+}
+.about__tools {
+  grid-area: tools;
+}
+.about__frontend {
+  grid-area: frontend;
+}
+.about__title {
+  text-align: center;
+  text-transform: uppercase;
+  grid-area: title;
+  color: $bg-light;
+  font-size: 1.5rem;
+  @include neu-text(2px);
+  @include laptop {
+    font-size: 1.8vw;
+  }
+}
+
+.about__card {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: $bg-light;
+  padding: 0.5rem;
+  @include neu-border(2px);
+  & .card__title {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: $bg-light;
+    border-radius: 0.5rem 0.5rem 0 0;
+    @include neu-inset-border(2px);
+    @include neu-text(2px);
+  }
+
+  & .card__content {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    @include neu-inset-border(2px);
+    & .card__logos {
+      width: 33%;
+      height: 50%;
+      max-height: 8vh;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      & .logo__img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+      & .logo__text {
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-grey;
+      }
+    }
+  }
+}
+.about__frontend .about__card .card__content .card__logos {
+  height: 33%;
+}
+
+.about__photo {
+  background: url("../assets/img/photo.jpg") no-repeat center center/cover;
+  margin: 0.5rem auto;
+  width: 33vw;
+  height: 33vw;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  @include neu-border(3px, 6px, rgba(0, 0, 0, 0.2), rgba(220, 220, 220, 0.9));
+  @include laptop {
+    margin: 2rem auto;
+    width: 15vw;
+    height: 15vw;
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+.about__text {
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-align: justify;
+  color: $text-grey;
+  line-height: 1.6rem;
+  width: 85%;
+  font-size: 0.8rem;
+  p {
+    margin: 1rem 0;
+  }
+  @include laptop {
+    line-height: 2.2vw;
+    width: 75%;
+    font-size: 1vw;
+  }
+}

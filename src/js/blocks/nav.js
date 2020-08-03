@@ -21,6 +21,6 @@ links.forEach((link) => {
   });
 });
 
-nav.addEventListener("mouseleave", async () => {
+nav.addEventListener("mouseleave", () => {
   underline(active);
 });

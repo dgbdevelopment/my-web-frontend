@@ -7,7 +7,9 @@
   --dark-color: #393d46;
   --darken-color: #212832;
   --bg-color: #15202b;
+  --bg-light: #eeeeee;
   --text-color: #dadada;
+  --text-grey: #6d6d6d;
 }
 
 $primary-color: var(--primary-color);
@@ -15,7 +17,9 @@ $secondary-color: var(--secondary-color);
 $danger-color: var(--danger-color);
 $cta-color: var(--cta-color);
 $bg-color: var(--bg-color);
+$bg-light: var(--bg-light);
 $light-gray: var(--light-gray);
 $dark-color: var(--dark-color);
 $darken-color: var(--darken-color);
 $text-color: var(--text-color);
+$text-grey: var(--text-grey);

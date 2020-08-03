@@ -1,8 +1,8 @@
 $small-mobile: 360px;
 $mobile: 361px;
-$tablet: 482px;
-$laptop: 769px;
-$desktop: 1025px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
 
 @mixin small-mobile {
   @media screen and (max-width: $small-mobile) {

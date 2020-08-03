@@ -3,7 +3,7 @@ block topbar
   -locals.pageActive='inicio'
   include ../includes/topbar
 block main
-  .hero
+  section.hero
     .hero__img
       .hero__content
         .hero__logo
@@ -15,4 +15,46 @@ block main
           h2.hero__text
             span(data-text="Desarrollador web frontend   ").typewritter
           a.hero__button Sobre mí
+  section.about
+    h2.about__title Mis lenguajes, herramientas y frameworks    
+    .about__me
+        .about__photo
+        .about__text
+          p Desarrollador  web enfocado principalmente al Frontend con conocimientos suficientes de  Backend como para poder  crear mis propias aplicaciones.
+          p He aprendido por mi cuenta siguiendo tutoriales y videos, haciendo cursos online, leyendo la documentación oficial y siguiendo consejos de otros desarrolladores más experimentados. Sin olvidar lo más importante: practicar, practicar y practicar.
+          p Aficionado al desarrollo de videojuegos.
+          p Lo mejor de la programación es que nunca terminas de aprender.
+    .about__frontend
+      .about__card
+        h3.card__title Frontend
+        .card__content
+          include ../config/logos
+            each logo in locals.logos_frontend
+              .card__logos
+                img(src=`assets/img/${logo.filename}`).logo__img
+                p.logo__text= logo.name 
+    .about__backend
+      .about__card
+        h3.card__title Backend
+        .card__content
+          each logo in locals.logos_backend
+            .card__logos
+              img(src=`assets/img/${logo.filename}`).logo__img
+              p.logo__text= logo.name 
+    .about__tools
+      .about__card
+        h3.card__title Herramientas
+        .card__content
+          each logo in locals.logos_tools
+            .card__logos
+              img(src=`assets/img/${logo.filename}`).logo__img
+              p.logo__text= logo.name 
+    .about__games
+      .about__card
+        h3.card__title Videojuegos
+        .card__content
+          each logo in locals.logos_games
+            .card__logos
+              img(src=`assets/img/${logo.filename}`).logo__img
+              p.logo__text= logo.name 
 

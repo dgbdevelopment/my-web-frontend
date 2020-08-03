@@ -7,8 +7,12 @@
 @import "base/normalize";
 @import "base/base";
 @import "base/general";
+
+@import "mixins/neumorphism.scss";
+
 @import "blocks/_buttons";
 
 @import "blocks/topbar";
 @import "blocks/hero";
 @import "blocks/logo";
+@import "blocks/about";
