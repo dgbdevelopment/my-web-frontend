@@ -55,13 +55,16 @@
   width: 100%;
   z-index: -1;
   background-color: $bg-color;
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  -ms-transition: transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out;
   &--show {
-    transition: 1s ease-in-out;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -ms-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    top: 4rem;
+    transform: translateY(100vh);
+    @include laptop {
+      transform: none;
+    }
     & .main-menu {
       border-top: 1px solid $light-gray;
       width: 100%;

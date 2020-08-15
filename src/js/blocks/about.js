@@ -1,7 +1,7 @@
 const logos_frontend = [
   { filename: "html.svg", name: "html" },
   { filename: "css.svg", name: "css" },
-  { filename: "js.svg", name: "js" },
+  { filename: "javascript.svg", name: "javascript" },
   { filename: "angular.svg", name: "angular" },
   { filename: "react.svg", name: "react" },
   { filename: "webpack.svg", name: "webpack" },

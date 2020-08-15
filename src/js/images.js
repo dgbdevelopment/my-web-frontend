@@ -14,7 +14,7 @@ import "../assets/img/logos/express.svg";
 import "../assets/img/logos/git.svg";
 import "../assets/img/logos/gulp.svg";
 import "../assets/img/logos/html.svg";
-import "../assets/img/logos/js.svg";
+import "../assets/img/logos/javascript.svg";
 import "../assets/img/logos/mongodb.svg";
 import "../assets/img/logos/mysql.svg";
 import "../assets/img/logos/nodejs.svg";
