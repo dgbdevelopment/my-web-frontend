@@ -1,0 +1,125 @@
+.more {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("../assets/img/more-border-mobile.png") no-repeat;
+  background-size: 100% 100vh;
+  @include laptop {
+    background: url("../assets/img/more-border-desktop.png") no-repeat;
+    background-size: 100% 100vh;
+  }
+}
+
+.more::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 50vh;
+  background: url("../assets/img/more-background.jpg") no-repeat center
+    center/cover;
+  top: 8vh;
+  left: 0;
+  z-index: -1;
+  @include laptop {
+    width: 70%;
+    min-height: 100vh;
+    top: 0;
+  }
+}
+
+.more__title h2 {
+  margin: 0;
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+  font-family: $title-font;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: $darken-color;
+  @include tablet {
+    font-size: 1.5rem;
+    padding-top: 6rem;
+    padding-left: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+  @include laptop {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20%;
+    padding-top: 8rem;
+  }
+}
+
+.more__content {
+  position: absolute;
+  overflow: visible;
+  left: 50%;
+  bottom: 15vh;
+  width: 80%;
+  transform: translateX(-50%);
+  @include tablet {
+    width: 60%;
+  }
+  @include laptop {
+    top: 50%;
+    left: 70%;
+    width: 25%;
+    transform: translateY(-40%);
+  }
+}
+.more__card.left,
+.more__card.right {
+  width: 100%;
+  font-size: 3vw;
+  padding-top: 1rem;
+  @include tablet {
+    font-size: 1rem;
+  }
+  @include laptop {
+    font-size: 1vw;
+    padding-top: 4rem;
+  }
+  & h3 {
+    position: relative;
+    margin: 0;
+    outline: none;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    & a {
+      color: $primary-color;
+      text-decoration: none;
+      letter-spacing: 0.15rem;
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0px;
+      left: 0;
+      transition: transform 1s linear;
+      z-index: -1;
+    }
+    &::after {
+      transform: translateX(-100%);
+      border-bottom: 2px solid $primary-color;
+    }
+    &::before {
+      border-bottom: 2px solid $text-color;
+    }
+    &:hover::after {
+      transform: translateX(0);
+    }
+  }
+  & p {
+    margin: 0;
+    padding-top: 0.5rem;
+  }
+}
+.more__card.right {
+  text-align: right;
+  h3::after {
+    right: 0;
+    transform: translateX(100%);
+  }
+}

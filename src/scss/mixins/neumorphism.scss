@@ -5,7 +5,7 @@
 ) {
   font-weight: 800;
   text-shadow: $pixels $pixels $pixels + 2 $first-color,
-    $pixels * (-1) $pixels * (-1) $pixels * 2 $second-color;
+    $pixels * (-1) $pixels * (-1) $pixels + 2 $second-color;
 }
 
 @mixin neu-border(

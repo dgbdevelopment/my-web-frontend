@@ -4,9 +4,10 @@
   width: 100%;
   background: linear-gradient(
     90deg,
-    rgb(215, 215, 215, 1) 0%,
-    rgba(238, 238, 238, 1) 40%,
-    rgba(238, 238, 238, 0) 100%
+    #d7d7d7 0%,
+    rgba(238, 238, 238, 1) 30%,
+    rgba(238, 238, 238, 1) 70%,
+    rgba(215, 215, 215, 1) 100%
   );
   // ,
   // radial-gradient(
@@ -76,10 +77,11 @@
     text-align: center;
     line-height: 2.5rem;
     text-transform: uppercase;
-    color: $bg-light;
+    color: $primary-color;
     border-radius: 0.5rem 0.5rem 0 0;
-    @include neu-inset-border(2px);
-    @include neu-text(2px);
+    // @include neu-inset-border(2px);
+    // @include neu-text(1px);
+    font-weight: 800;
   }
 
   & .card__content {
