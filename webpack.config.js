@@ -18,6 +18,10 @@ module.exports = {
       filename: "blog.html",
       template: "./src/views/pages/blog.pug",
     }),
+    new HtmlWebpackPlugin({
+      filename: "portafolio.html",
+      template: "./src/views/pages/portafolio.pug",
+    }),
     new MiniCssExtractPlugin({
       filename: "css/styles.css?" + new Date().getTime(),
     }),

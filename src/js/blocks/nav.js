@@ -3,7 +3,7 @@ const marker = document.getElementById("marker");
 const links = document.querySelectorAll(".main-menu__link");
 const active = document.querySelector(".main-menu__link--active");
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   underline(active);
   window.addEventListener("resize", () => {
     underline(active);

@@ -21,6 +21,10 @@
   left: 0;
   z-index: -1;
   @include laptop {
+    background: url("../assets/img/more-background-desktop.png") no-repeat
+      center center/cover;
+    background-attachment: fixed;
+
     width: 70%;
     min-height: 100vh;
     top: 0;

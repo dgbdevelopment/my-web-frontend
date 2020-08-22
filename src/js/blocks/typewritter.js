@@ -3,6 +3,7 @@ const heroButton = document.querySelector(".hero__button");
 
 function typewritter() {
   const typewritter = document.querySelectorAll(".typewritter");
+  if (typewritter.length == 0) return;
   type(typewritter);
 }
 

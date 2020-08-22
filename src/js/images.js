@@ -7,6 +7,7 @@ import "../assets/img/photo.jpg";
 import "../assets/img/more-background.jpg";
 import "../assets/img/more-border-mobile.png";
 import "../assets/img/more-border-desktop.png";
+import "../assets/img/more-background-desktop.png";
 
 import "../assets/img/logos/adobexd.svg";
 import "../assets/img/logos/angular.svg";

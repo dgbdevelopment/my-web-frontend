@@ -23,3 +23,13 @@ $dark-color: var(--dark-color);
 $darken-color: var(--darken-color);
 $text-color: var(--text-color);
 $text-grey: var(--text-grey);
+
+@mixin bg-grey-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(205, 205, 205, 1) 0%,
+    rgba(238, 238, 238, 1) 30%,
+    rgba(238, 238, 238, 1) 70%,
+    rgba(205, 205, 205, 1) 100%
+  );
+}

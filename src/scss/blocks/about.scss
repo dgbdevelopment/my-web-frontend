@@ -2,20 +2,7 @@
   margin: 0 auto;
   padding: 7rem 2rem 3rem 2rem;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    #d7d7d7 0%,
-    rgba(238, 238, 238, 1) 30%,
-    rgba(238, 238, 238, 1) 70%,
-    rgba(215, 215, 215, 1) 100%
-  );
-  // ,
-  // radial-gradient(
-  //   circle at center top,
-  //   rgba(238, 238, 238, 1) 0%,
-  //   rgba(238, 238, 238, 0) 70%,
-  //   rgba(0, 173, 180, 1) 120%
-  // );
+  @include bg-grey-gradient;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 80vh 35vh 35vh 35vh;
