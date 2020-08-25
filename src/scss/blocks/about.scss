@@ -36,9 +36,9 @@
   grid-area: title;
   text-align: center;
   text-transform: uppercase;
-  color: $bg-light;
+  color: $primary-color;
   font-size: 1.5rem;
-  @include neu-text(2px);
+  @include neu-text(1px);
   @include laptop {
     font-size: 1.8vw;
   }
@@ -55,7 +55,7 @@
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background-color: $bg-light;
+  background-color: $bg-color;
   padding: 0.5rem;
   @include neu-border(2px);
   & .card__title {
@@ -65,10 +65,10 @@
     line-height: 2.5rem;
     text-transform: uppercase;
     color: $primary-color;
+    @include neu-text(1px);
     border-radius: 0.5rem 0.5rem 0 0;
-    // @include neu-inset-border(2px);
-    // @include neu-text(1px);
-    font-weight: 800;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
   }
 
   & .card__content {
@@ -108,7 +108,7 @@
         font-size: 0.8rem;
         font-weight: 700;
         text-transform: uppercase;
-        color: $text-grey;
+        color: $text-color;
       }
     }
   }
@@ -125,7 +125,7 @@
   max-width: 120px;
   max-height: 120px;
   border-radius: 50%;
-  @include neu-border(3px, 6px, rgba(0, 0, 0, 0.2), rgba(220, 220, 220, 0.9));
+  @include neu-border(2px, 8px, rgba(0, 0, 0, 0.9), rgba(220, 220, 220, 0.2));
   @include laptop {
     margin: 2rem auto;
     width: 15vw;
@@ -139,7 +139,7 @@
   margin: 0 auto;
   margin-top: 3rem;
   text-align: justify;
-  color: $text-grey;
+  color: $text-color;
   line-height: 1.6rem;
   width: 85%;
   font-size: 0.8rem;

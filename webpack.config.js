@@ -22,6 +22,10 @@ module.exports = {
       filename: "portafolio.html",
       template: "./src/views/pages/portafolio.pug",
     }),
+    new HtmlWebpackPlugin({
+      filename: "contacto.html",
+      template: "./src/views/pages/contacto.pug",
+    }),
     new MiniCssExtractPlugin({
       filename: "css/styles.css?" + new Date().getTime(),
     }),

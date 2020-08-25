@@ -8,6 +8,7 @@ import "../assets/img/more-background.jpg";
 import "../assets/img/more-border-mobile.png";
 import "../assets/img/more-border-desktop.png";
 import "../assets/img/more-background-desktop.png";
+import "../assets/img/under-construction.jpg";
 
 import "../assets/img/logos/adobexd.svg";
 import "../assets/img/logos/angular.svg";
@@ -28,3 +29,9 @@ import "../assets/img/logos/sass.svg";
 import "../assets/img/logos/unity.svg";
 import "../assets/img/logos/vscode.svg";
 import "../assets/img/logos/webpack.svg";
+
+import "../assets/img/projects/chokauto.jpg";
+import "../assets/img/projects/asesoreslb.jpg";
+import "../assets/img/projects/tareas.jpg";
+import "../assets/img/projects/tresenraya.jpg";
+import "../assets/img/projects/simon.jpg";

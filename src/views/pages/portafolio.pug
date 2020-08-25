@@ -6,17 +6,67 @@ block topbar
   include ../includes/topbar
 block main
   section.projects
-    h1.projects__title.primary Mis proyectos
+    h1.projects__title.primary Proyectos
     .projects__container
-      .projects__card
-        .card__front
-        .card__back
-      .projects__card
-        .card__front
-        .card__back
-      .projects__card
-        .card__front
-        .card__back
-      .projects__card
-        .card__front
-        .card__back
+      .card__container
+        .card
+          .card__front
+            img(src="assets/img/chokauto.jpg")
+          .card__back
+            .card__back__content 
+              h2.card__back__title Web chokauto.es
+              p.card__back__description Diseño, desarrollo y redacción de textos para empresa dedicada a las reparaciones en el sector de la automoción.
+              p.card__back__utils Frontend en Angular 7 y un pequeño backend para tratar los mensajes de la sección de contacto.
+              .card__back__buttons
+                a(href="https://chokauto.es" target="_blank") Ir al sitio
+                a(href="https://github.com/dgbdevelopment/Chok-Auto-Web" target="_blank") Código frontend
+                a(href="https://github.com/dgbdevelopment/mail-sender" target="_blank") Código backend
+      .card__container
+        .card
+          .card__front
+            img(src="assets/img/asesoreslb.jpg")
+          .card__back
+            .card__back__content 
+              h2.card__back__title Landing page L&B Asesores
+              p.card__back__description Diseño y desarrollo para asesoría laboral, fiscal y contable. 
+              p.card__back__utils Html, Css y Javascript. Sin librerías. Diseño simple a petición del cliente.
+              .card__back__buttons
+                a(href="https://asesoreslb.com" target="_blank") Ir al sitio                
+                a(href="https://github.com/dgbdevelopment/asesoreslb" target="_blank") Ver código
+      .card__container
+        .card
+          .card__front
+            img(src="assets/img/simon.jpg")
+          .card__back
+            .card__back__content 
+              h2.card__back__title Simon
+              p.card__back__description Juego Simon. Repite la secuencia exacta de pulsaciones que marque la CPU. Prueba de memoria.
+              p.card__back__utils Código javascript puro sin librerías. Uso de webpack, sass y pug.
+              .card__back__buttons
+                a(href="http://dgbdevelopment.com/simon" target="_blank") Ir al sitio                
+                a(href="https://github.com/dgbdevelopment/simon" target="_blank") Ver código
+      .card__container
+        .card
+          .card__front
+            img(src="assets/img/tresenraya.jpg")
+          .card__back
+            .card__back__content 
+              h2.card__back__title Tres en raya
+              p.card__back__description Juego tres en raya. El oponente es la CPU. Prueba el modo imposible.
+              p.card__back__utils Código javascript puro sin librerías. Uso de webpack, sass y pug.
+              .card__back__buttons
+                a(href="http://dgbdevelopment.com/tresenraya" target="_blank") Ir al sitio                
+                a(href="https://github.com/dgbdevelopment/tresenraya" target="_blank") Ver código
+      .card__container
+        .card
+          .card__front
+            img(src="assets/img/tareas.jpg")
+          .card__back
+            .card__back__content 
+              h2.card__back__title Lista de tareas
+              p.card__back__description Aplicación de lista de tareas desarrollada en el backend. Con registro de usuarios y autentificación. 
+              p.card__back__utils Con node, express, mongodb y vistas en handlebars. Librerías usadas: bcrypt, moment, passport, connect-flash y method-override.
+              .card__back__buttons
+                a(href="https://tareas.dgbdevelopment.com" target="_blank") Ir al sitio                
+                a(href="https://github.com/dgbdevelopment/App-Tasks" target="_blank") Ver código
+
