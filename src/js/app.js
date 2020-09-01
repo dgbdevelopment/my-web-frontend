@@ -9,3 +9,5 @@ import "./blocks/toggle-button.js";
 import "./blocks/typewritter.js";
 import "./blocks/about.js";
 import "./blocks/projects.js";
+import "./blocks/projects-fetch.js";
+import "./blocks/contact.js";

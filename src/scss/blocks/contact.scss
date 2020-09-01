@@ -1,0 +1,191 @@
+section.contact {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  @include bg-grey-gradient;
+  @include laptop {
+    background: url("../assets/img/contact-bg.svg") no-repeat center
+      center/cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  & .img {
+    position: relative;
+    & img {
+      width: 100%;
+      height: 40vh;
+      left: 0;
+      object-fit: cover;
+      object-position: center;
+      @include laptop {
+        height: 60vw;
+        width: 60vw;
+        max-height: 60vh;
+        max-width: 60vh;
+        border-radius: 10px;
+      }
+    }
+    @include laptop {
+      transform: translateY(-2rem);
+      width: 60%;
+      height: 60vw;
+      max-height: 60vh;
+      max-width: 60vh;
+    }
+  }
+  & .form {
+    position: absolute;
+    top: 4rem;
+    color: $bg-color;
+    font-size: 0.8rem;
+    width: 100%;
+    &__title {
+      margin-left: 1.5rem;
+      @include laptop {
+        display: block;
+        color: $primary-color;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        & h2 {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include laptop {
+      position: relative;
+      width: 30%;
+      height: 40vw;
+      max-height: 40vh;
+      max-width: 40vh;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__description {
+      width: max-content;
+      position: absolute;
+      top: 40vh;
+      color: $text-color;
+      margin-left: 1.5rem;
+      @include laptop {
+        position: relative;
+        top: 0;
+        & h3 {
+          margin: 0;
+        }
+      }
+    }
+    &__content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      top: 45vh;
+      height: 42vh;
+      margin-top: 0.5rem;
+      padding: 0.25rem 1.5rem;
+      width: 100%;
+      color: $text-color;
+      @include laptop {
+        position: relative;
+        top: 0;
+        height: 25vw;
+        max-height: 25vh;
+      }
+    }
+    &__group {
+      position: relative;
+      width: 100%;
+    }
+    &__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(1.25rem);
+      transition: transform 0.5s, color 0.5s, border-color 0.5s;
+      &[for="message"] {
+        transform: translate(0.5rem, 1.5rem);
+      }
+    }
+    &__input,
+    &__textarea {
+      position: relative;
+      color: $text-color;
+      width: 100%;
+      margin-top: 1rem;
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+    &__input {
+      border-bottom: 1px solid $text-color;
+      height: 1.5rem;
+      &--selected {
+        border-color: $primary-color;
+      }
+      &--selected + label {
+        color: $primary-color;
+        transform: translate(0);
+      }
+    }
+    &__textarea {
+      border: 1px solid $text-color;
+      border-radius: 5px;
+      height: 8rem;
+      resize: none;
+      padding: 0.5rem;
+      color: $text-color;
+      &--selected {
+        border-color: $primary-color;
+      }
+      &--selected + label.form__label {
+        color: $primary-color;
+        transform: translate(0);
+      }
+      @include laptop {
+        height: 10vh;
+      }
+    }
+
+    &__submit {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      color: $bg-color;
+      font-weight: 500;
+      background-color: #c3d2d8;
+      font-size: 0.9rem;
+    }
+  }
+  & .social {
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    padding: 1rem 0;
+    height: 40vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    & a {
+      text-decoration: none;
+      color: $bg-color;
+      @include laptop {
+        color: $text-color;
+        font-size: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    @include laptop {
+      top: 87%;
+      left: 50%;
+      width: 35vw;
+      height: 3rem;
+      transform: translateX(-50%);
+      flex-direction: row;
+    }
+  }
+}

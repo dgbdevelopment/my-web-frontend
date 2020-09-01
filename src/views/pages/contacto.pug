@@ -5,4 +5,33 @@ block topbar
   -locals.pageActive='contacto'
   include ../includes/topbar
 block main
-  .under-construction
+  section.contact
+    .img
+      img(src="/assets/img/contact.jpg")
+    .form
+      .form__title
+        h2 Contacto
+      .form__description
+        h3 Deja tu mensaje
+      form.form__content(action="#" method="POST" autocomplete="off")
+        .form__group
+          input#email.form__input(type="email" name="email" required)
+          label.form__label(for="email") Email
+        .form__group
+          textarea#message.form__textarea(name="message" required)
+          label.form__label(for="message") Mensaje
+        .form__group
+          input.form__submit(type="submit" value="Enviar")
+    .social
+      a(href="https://github.com/dgbdevelopment" target="_blank" rel="noopener")
+        i.fab.fa-github
+      a(href="https://twitter.com/dgbdevelopment" target="_blank" rel="noopener")
+        i.fab.fa-twitter
+      a(href="https://www.linkedin.com/in/david-guerrero-bernal-66a590169/" target="_blank" rel="noopener")
+       i.fab.fa-linkedin
+      a(href="https://facebook.com/dgbdevelopment" target="_blank" rel="noopener")
+        i.fab.fa-facebook
+      a(href="https://stackoverflow.com/users/14193075/dgb-development" target="_blank" rel="noopener")
+        i.fab.fa-stack-overflow
+      a(href="https://dev.to/dgbdevelopment" target="_blank" rel="noopener")
+        i.fab.fa-dev
