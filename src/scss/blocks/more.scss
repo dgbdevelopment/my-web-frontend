@@ -5,7 +5,7 @@
   background: url("../assets/img/more-border-mobile.png") no-repeat;
   background-size: 100% 100vh;
   @include laptop {
-    background: url("../assets/img/more-border-desktop.png") no-repeat;
+    background: url("../assets/img/more-border-desktop.svg") no-repeat;
     background-size: 100% 100vh;
   }
 }

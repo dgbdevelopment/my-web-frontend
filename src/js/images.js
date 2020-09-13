@@ -5,11 +5,13 @@ import "../assets/img/hero-background.jpg";
 import "../assets/img/photo.jpg";
 import "../assets/img/more-background.jpg";
 import "../assets/img/more-border-mobile.png";
-import "../assets/img/more-border-desktop.png";
+import "../assets/img/more-border-desktop.svg";
 import "../assets/img/more-background-desktop.png";
 import "../assets/img/under-construction.jpg";
 import "../assets/img/contact.jpg";
 import "../assets/img/contact-bg.svg";
+import "../assets/img/loader.svg";
+import "../assets/img/blog-bg.svg";
 
 import "../assets/img/logos/adobexd.svg";
 import "../assets/img/logos/angular.svg";
@@ -30,3 +32,5 @@ import "../assets/img/logos/sass.svg";
 import "../assets/img/logos/unity.svg";
 import "../assets/img/logos/vscode.svg";
 import "../assets/img/logos/webpack.svg";
+
+import "../assets/img/articles/article-img.jpg";

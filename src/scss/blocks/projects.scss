@@ -7,8 +7,8 @@
   overflow: hidden;
   & span {
     position: absolute;
-    background-color: #d8d8d8;
-    animation: stars 3s ease;
+    background: hsl(0%, 100%, 70%);
+    animation: stars 3s ease-in-out;
     border-radius: 100%;
     box-shadow: 0 0 3px #d8d8d8, 0 0 10px #d8d8d8;
   }

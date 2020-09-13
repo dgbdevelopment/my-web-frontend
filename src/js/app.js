@@ -11,3 +11,4 @@ import "./blocks/about.js";
 import "./blocks/projects.js";
 import "./blocks/projects-fetch.js";
 import "./blocks/contact.js";
+import "./blocks/blog.js";

@@ -19,6 +19,7 @@ function createStar() {
     Math.floor(Math.random() * projectsSection.offsetHeight) + 1 + "px";
   star.style.left =
     Math.floor(Math.random() * projectsSection.offsetWidth) + 1 + "px";
+  star.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`;
 
   projectsSection.appendChild(star);
 

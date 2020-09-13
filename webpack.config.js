@@ -19,6 +19,10 @@ module.exports = {
       template: "./src/views/pages/blog.pug",
     }),
     new HtmlWebpackPlugin({
+      filename: "article.html",
+      template: "./src/views/pages/article.pug",
+    }),
+    new HtmlWebpackPlugin({
       filename: "portafolio.html",
       template: "./src/views/pages/portafolio.pug",
     }),

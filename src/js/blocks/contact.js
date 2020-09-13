@@ -18,3 +18,37 @@ if (message) {
     e.target.classList.remove("form__textarea--selected");
   });
 }
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  let sending = false;
+  const loader = document.getElementById("loader");
+  const resultText = document.getElementById("result-text");
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    resultText.style.color = "#dadada";
+    if (sending) return;
+    sending = true;
+    loader.classList.add("loader--show");
+    resultText.textContent = "Enviando...";
+    fetch(event.target.action, {
+      method: "POST",
+      body: new URLSearchParams(new FormData(event.target)),
+    })
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((data) => {
+        loader.classList.remove("loader--show");
+        resultText.textContent = data.message;
+        const color = data.color == "green" ? "#00adb4" : "red";
+        resultText.style.color = color;
+        sending = false;
+      })
+      .catch((error) => {
+        loader.classList.remove("loader--show");
+        resultText.textContent = "Ha ocurrido un error";
+        resultText.style.color = "red";
+        sending = false;
+      });
+  });
+}

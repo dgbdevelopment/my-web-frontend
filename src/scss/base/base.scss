@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   color: $text-color;
   min-height: 100vh;
   font-family: $main-font;
+  cursor: auto;
 }
 
 h1 {

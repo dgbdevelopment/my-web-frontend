@@ -5,4 +5,317 @@ block topbar
   -locals.pageActive='blog'
   include ../includes/topbar
 block main
-  .under-construction
+  - let articles = true
+  #bg.blog__content
+  .blog__container
+    if articles
+      .blog__navbar
+        .blog__order
+          #blog__select.blog__select
+            #select__title.select__title 
+              span Ordenar
+              i.fas.fa-angle-down(style="margin-left: auto")
+            .select__option#descendant
+              span Más recientes primero
+            .select__option#ascendant
+              span Más antiguos primero
+        .blog__search
+          form.blog__form(action="" method="POST" autocomplete="off")
+            input(type="text", name="article_search" id="article_search" placeholder="⌕" title="Buscar artículo")
+      .blog__articles
+        h1 Artículos publicados
+        hr
+        .article__container
+          .article__top
+            .article__img
+              img(src="/assets/img/article-img.jpg")
+            .article__title
+              h2 Git
+              h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga aut accusamus aliquid reprehenderit quas non pariatur eos cum cumque nam.
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__top
+            .article__img
+              img(src="/assets/img/article-img.jpg")
+            .article__title
+              h2 Git
+              h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__top
+            .article__img
+              img(src="/assets/img/article-img.jpg")
+            .article__title
+              h2 Git
+              h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+        .article__container
+          .article__img
+            img(src="/assets/img/article-img.jpg")
+          .article__title
+            h2 Git
+            h3 Guía rápida
+          .article__description
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. A, reprehenderit mollitia iusto nulla accusamus impedit repellat officia maxime natus odio?
+          .article__footer
+            span.article__date 30 de Agosto de 2020
+            a(href="article.html").article__button Leer
+    else
+      .blog__article
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis expedita aspernatur quis nihil repellendus itaque dignissimos eaque laboriosam nam tenetur in illo laudantium quo aliquid voluptates cum impedit, repudiandae quod at. Sequi excepturi libero molestiae accusamus voluptatum architecto ullam odit modi. Nemo corrupti saepe exercitationem blanditiis vero voluptatum mollitia neque labore ipsam dolorum. Modi velit perspiciatis est ad aspernatur odio?
+        p Odit pariatur repudiandae vel reiciendis soluta laudantium, officia porro consectetur, iure tempora labore neque qui ratione accusamus, quam atque? Sit excepturi impedit repellendus at debitis, pariatur rem nisi vero nostrum ipsum praesentium blanditiis non iure quaerat nobis quae maxime voluptatibus saepe autem, ducimus fugiat! Quo fugit rem eligendi nobis explicabo voluptate voluptatem praesentium, inventore rerum dolorum deserunt suscipit? Adipisci, aliquam.
+        p Ipsam, at fugit neque et repudiandae laudantium odio modi nesciunt. Quis, provident pariatur saepe animi itaque similique aliquam libero quae ut ullam aut dolorem explicabo inventore debitis minus culpa, aliquid numquam. Commodi tempore nostrum voluptatibus et, enim deserunt iste dolores sapiente incidunt maxime iusto asperiores quis? Labore libero explicabo excepturi similique placeat sit ut est minima! Reiciendis explicabo repellendus veritatis.
+        p Blanditiis rem distinctio, suscipit autem minima nesciunt, mollitia deleniti ullam laboriosam enim esse quae architecto iste quasi aspernatur! Explicabo ab, illum ea, illo id beatae consequuntur quidem earum doloremque quos nesciunt sequi quod dicta laudantium nemo voluptas obcaecati fuga aperiam, iste corrupti dolor consectetur praesentium. Ut molestias architecto quidem minima iusto dolore laudantium asperiores laboriosam, modi provident reiciendis tenetur tempora!
+        p Praesentium quibusdam animi est ea eveniet nobis at ducimus quas? Similique perspiciatis nesciunt totam quas. Nihil iusto exercitationem fugiat asperiores vel sed quos officiis tenetur dolore, ullam laboriosam quod amet dignissimos alias tempora! Mollitia voluptatibus eius sed voluptates aperiam a fuga, soluta labore laborum! Nemo veniam minima quia debitis sapiente aliquam quas recusandae ex facilis rem? Atque amet eos unde!
+        p Dolor quasi obcaecati dolores eum quas libero reprehenderit quam adipisci doloribus in, vitae nesciunt placeat corrupti minus laboriosam delectus maxime ut illum totam repudiandae exercitationem odio tempore porro neque! Beatae, dolore soluta harum explicabo dicta adipisci consequuntur aliquam neque similique ullam quos nobis incidunt autem debitis eum sunt iste! Vero quibusdam nostrum fuga repellat laudantium? Rem incidunt rerum eum veniam!
+        p Aspernatur voluptates ipsum accusamus quidem consectetur incidunt modi recusandae vel accusantium, nihil esse nesciunt molestiae, quo quas quam sint sequi minus repellat aliquid. Recusandae labore nam eos, vitae doloribus cumque in quisquam provident voluptatem! Voluptatem ullam officia ratione ad autem cumque fugit a eveniet exercitationem id quis commodi deserunt, expedita voluptate assumenda sit labore. Temporibus fuga voluptas nostrum distinctio quas.
+        p Illo, similique voluptatum nostrum assumenda obcaecati alias dicta in esse, animi accusamus hic nihil nemo quidem voluptas blanditiis. Quaerat nihil architecto voluptatem minima suscipit sunt cupiditate totam corrupti non ipsam, libero dolor, facere quam dignissimos placeat, repellendus saepe eum fugiat! Debitis est deleniti architecto perferendis repudiandae quia laborum dolorem animi, nesciunt aliquid deserunt. Quibusdam, architecto debitis! Modi vero deserunt cum.
+        p A harum aspernatur excepturi, aliquid ea incidunt dicta nisi culpa vero quaerat. Officia molestias modi repellendus ipsum beatae sapiente consectetur officiis ad dolores doloremque pariatur, eos id ut vel, fugit animi mollitia libero labore, ab ullam corporis. Odio temporibus nostrum, aperiam sapiente error repudiandae provident reprehenderit quos dolores nisi, ab repellat eos veritatis adipisci modi eveniet? Dolore molestias reiciendis pariatur?
+        p Magnam omnis dicta architecto nesciunt nostrum fugit natus ex ea repellat id minima facilis perspiciatis, quaerat sequi unde, beatae obcaecati commodi, eos quis voluptatem? A recusandae illo aspernatur quod eveniet vel atque soluta quasi nemo, sunt officiis dolor esse odio sed tempore sint sequi! Dignissimos expedita rerum maxime voluptatum quae non quam commodi eum fugiat, accusamus vel ea ab suscipit!
+        p Voluptatum rerum fugit laudantium quidem eos, modi doloremque eaque, laboriosam asperiores nostrum vero dolores repellat quia deserunt sunt nobis vitae, labore non ex dolor! Magnam possimus natus hic dolore eum quisquam libero. Voluptatibus iusto nulla accusantium tempore porro, quos iste facilis suscipit eos exercitationem aperiam unde, non, doloremque beatae voluptatem obcaecati molestiae. Ullam in eius praesentium excepturi cum ipsa soluta.
+        p Corporis cumque adipisci, eius aliquam assumenda doloremque explicabo. Tenetur, repellat adipisci? Blanditiis saepe ea nesciunt corrupti perspiciatis, consequuntur illo, similique nostrum commodi nemo reiciendis quam, molestiae porro voluptatibus dolorum obcaecati laudantium illum placeat optio. Repellendus veritatis mollitia recusandae possimus iusto totam. Culpa, tenetur optio. Ullam quam, fuga optio amet suscipit porro placeat odio, magni error recusandae vitae nemo voluptates veritatis?
+        p Delectus blanditiis maiores culpa cupiditate molestiae earum omnis, qui atque rem minima optio quod eos odio vitae cum nihil facere. Rem amet deleniti repellendus atque id modi, alias eaque eos mollitia in ullam placeat, ut eligendi possimus veniam laudantium! Aperiam at, vero voluptatum reiciendis, ratione eligendi neque quae non architecto provident nemo quis pariatur nesciunt laboriosam unde. Reprehenderit, pariatur sint!
+        p Modi obcaecati consequuntur consequatur vel est tempora amet iste! Suscipit, provident magni, fuga placeat accusamus quaerat et numquam commodi maiores deleniti ratione exercitationem. Rerum libero repudiandae id! Tempora labore maxime consequatur illo, assumenda deleniti molestiae recusandae a officia quo debitis totam commodi perspiciatis optio ipsum at? Voluptatum quam, ipsam magnam, unde vitae voluptates, nobis corrupti aliquid quas quisquam debitis ea.
+        p Voluptatum a modi quibusdam quasi voluptatibus expedita, minus dicta saepe quo excepturi quae et ipsa recusandae omnis distinctio officiis porro ducimus architecto deleniti optio eligendi sit qui? Dicta soluta magni ea aliquam quaerat dolorem incidunt suscipit porro vero voluptatum cumque tempora alias ratione eum impedit adipisci quis corrupti in, sunt illum dolores optio ab deserunt veritatis! Cupiditate reprehenderit necessitatibus nemo?
+        p Sit architecto, odio nulla iste consequatur, mollitia, sequi alias explicabo harum suscipit cupiditate ipsa in aliquid blanditiis assumenda ea veritatis soluta maxime eveniet! Similique aperiam qui ipsum deserunt autem! Porro tenetur vitae inventore, cumque, atque culpa error quaerat voluptates, commodi ducimus ullam. Placeat, possimus mollitia repellat voluptatibus, fugit eligendi temporibus asperiores neque qui, vel ad! Beatae in magni impedit doloremque?
+        p Quia nemo debitis deleniti possimus, vel aspernatur ut consequatur. Nobis dicta iure itaque inventore, rem ad facere cupiditate perferendis assumenda ducimus possimus tenetur eligendi nam. Sunt accusamus earum fugit consequuntur itaque error nihil illum. Similique sed repudiandae labore dignissimos at voluptatibus dolorem eum commodi quo explicabo, debitis facilis perspiciatis adipisci in illo quibusdam mollitia nesciunt incidunt! Dolorum vel excepturi ducimus!
+        p Alias necessitatibus officiis facere cum perspiciatis eum vel suscipit, expedita natus distinctio, iusto asperiores. Est veritatis inventore, facere dolorum, soluta debitis corrupti excepturi repudiandae a ea rerum? Porro sunt officiis at sint cupiditate, laudantium fugit natus incidunt quia deleniti velit debitis expedita aspernatur asperiores qui minima pariatur cum voluptatum unde ducimus excepturi facilis optio harum. Ad repellat laboriosam illum fugiat.
+        p Tempore nemo aspernatur illum magnam accusantium harum atque repudiandae quidem dolore dolor omnis eveniet necessitatibus alias laudantium praesentium facilis, adipisci placeat, iure ab debitis molestias sapiente doloremque nulla totam! Odit omnis voluptatem enim, a tempora sit? Autem id inventore consequuntur consectetur culpa sed explicabo architecto minima, ut perferendis possimus omnis enim praesentium fugit ab facilis recusandae eaque ipsum? Nihil, similique!
+        p Distinctio, perspiciatis dicta, illo aliquid ipsam earum sapiente tempore tempora, accusantium magnam totam corrupti deleniti doloribus iure explicabo odio facilis repudiandae fugit consequatur. Nemo officiis est dolorem quo! Cum sint aperiam quas esse itaque eveniet illum omnis, dolorem, dolore sapiente fugit! Magnam dolorem quasi et. Totam rem repudiandae nam odio! Voluptatum alias ullam ut quas reiciendis est laudantium praesentium delectus.
+        p Pariatur quae minima laborum nisi nihil expedita molestiae, nam quas eaque voluptatibus accusamus voluptate. Maiores reiciendis, vel totam, numquam eligendi sapiente laudantium ipsum voluptas vero deserunt, aliquid provident quas sint est accusamus quae dolorem autem magnam. Repudiandae odio illo asperiores quas molestiae quisquam incidunt numquam eum nesciunt perferendis temporibus dicta nobis optio soluta quasi, sint aperiam quam atque neque qui!
+        p Consectetur veritatis iste consequuntur, expedita quidem deserunt. Rerum, quaerat ea! Tenetur adipisci nesciunt accusantium. Sed iusto, doloremque quae quidem maxime qui ipsa, delectus magni non tempore animi fuga vel culpa fugiat inventore sequi architecto obcaecati? Dolores nemo, fugiat dignissimos voluptatibus molestiae obcaecati veritatis officiis a aperiam atque nihil nulla quibusdam ipsa exercitationem? Odit atque a voluptate porro dolores accusamus possimus.
+        p Iusto odit incidunt magni harum numquam dolorem vel culpa nulla velit ducimus excepturi sequi ullam architecto amet, sed aliquid eius blanditiis cupiditate voluptates neque minima? Voluptatum, iusto! Accusamus ea voluptas quasi unde qui mollitia a hic possimus, distinctio fugit eligendi assumenda maiores, laudantium repellendus, deleniti sapiente. Quisquam molestiae dolor reiciendis facilis corrupti qui quas, atque, numquam fuga ullam, id doloribus.
+        p Provident deleniti minus quis molestias expedita, voluptatum temporibus, ad est, fugiat vitae vel ex soluta eligendi qui? Nam, doloremque, fugit magnam amet at assumenda a magni recusandae culpa dolore non quas aspernatur. Modi nemo, maxime incidunt temporibus nam dolor in natus consequatur nobis repudiandae dolore ipsum molestiae ut! Voluptatum reiciendis officiis at. Explicabo dolore, ipsam optio delectus laboriosam fuga vero!
+        p Harum odit, eaque delectus aliquid earum eius quis maxime, possimus provident eligendi voluptatibus non saepe nostrum dicta quod dolorem omnis velit alias? Aspernatur saepe iure sed quaerat laboriosam veritatis excepturi in tempore maiores distinctio officiis, nobis laudantium ipsam necessitatibus dolor reiciendis delectus laborum provident esse, architecto voluptates odit! Deserunt, obcaecati quae provident nisi corrupti inventore repellendus modi harum hic similique?
