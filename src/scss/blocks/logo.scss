@@ -4,16 +4,16 @@ svg.svg__animated {
   fill: none;
   stroke-width: 0.2px;
   stroke: $text-color;
-  animation: filled ease-in-out 1.5s forwards 3s;
-  -webkit-animation: filled ease-in-out 1.5s forwards 3s;
+  animation: filled ease-in-out 1s forwards 4.8s;
+  -webkit-animation: filled ease-in-out 1s forwards 4.8s;
   @include laptop {
     max-width: 40vw;
   }
 }
 
 path#path1388 {
-  -webkit-animation: vector 3s linear;
-  animation: vector 3s linear;
+  -webkit-animation: vector 4.8s linear;
+  animation: vector 4.8s linear;
   stroke-dasharray: 328px;
 }
 
