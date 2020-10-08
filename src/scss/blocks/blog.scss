@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: url("/assets/img/blog-bg.svg") no-repeat top center/cover;
+  background: url("../assets/img/blog-bg.svg") no-repeat top center/cover;
 }
 .blog__container {
   position: relative;
@@ -38,7 +38,7 @@
   .blog__order {
     & .blog__form {
       font-size: 0.9em;
-      & input[type="text"] {
+      & #article_search {
         width: 3em;
         height: 3em;
         color: $text-color;
@@ -177,6 +177,7 @@
     justify-content: space-between;
     align-items: flex-end;
     font-size: 0.8em;
+    padding-top: 0.5em;
     & span {
       color: $light-gray;
     }
@@ -236,9 +237,32 @@
   }
   & .article__content {
     padding-top: 1.5em;
+    & h3 {
+      margin-top: 2em;
+    }
     & p {
       text-align: justify;
       line-height: 1.7;
+    }
+    & pre {
+      background-color: black;
+      color: #6cf4f1;
+      padding: 0.5em 1.5em;
+      overflow: auto;
+      & span.comment {
+        color: $light-gray;
+      }
+    }
+    & ul {
+      margin: 0 0 0.5em 0;
+      padding-inline-start: 1em;
+      @include laptop {
+        padding-inline-start: 2em;
+      }
+      & li {
+        line-height: 1.5;
+        padding: 0.5em 0;
+      }
     }
   }
 }

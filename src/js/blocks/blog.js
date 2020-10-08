@@ -1,3 +1,5 @@
+let currentQuery;
+
 //scroll de background
 const bg = document.getElementById("bg");
 function smoothScroll() {
@@ -7,11 +9,11 @@ function smoothScroll() {
     initialScroll = window.pageYOffset;
     totalScroll = document.body.offsetHeight - window.innerHeight;
     let currentScroll = pageYOffset;
-    if (currentScroll >= initialScroll) {
-      console.log("bajando");
-    } else {
-      console.log("subiendo");
-    }
+    // if (currentScroll >= initialScroll) {
+    //   console.log("bajando");
+    // } else {
+    //   console.log("subiendo");
+    // }
     placeBg(totalScroll);
     initialScroll = currentScroll;
   });
@@ -22,26 +24,6 @@ function smoothScroll() {
 }
 function placeBg(totalScroll) {
   bg.style.top = -(((pageYOffset / totalScroll) * bg.offsetHeight) / 2) + "px";
-}
-
-//Ordenar búsquedas
-const blogSelect = document.getElementById("blog__select");
-if (blogSelect) {
-  const title = blogSelect.firstElementChild;
-  title.addEventListener("click", function () {
-    this.parentElement.classList.toggle("blog__select--expanded");
-  });
-  const order = document.querySelectorAll(".select__option");
-  order.forEach((elem) => {
-    elem.addEventListener("click", () => {
-      doQuery(elem.id);
-      title.firstElementChild.textContent = elem.firstElementChild.textContent;
-      title.parentElement.classList.remove("blog__select--expanded");
-    });
-  });
-}
-function doQuery(order) {
-  console.log(order);
 }
 
 const blogArticles = document.getElementById("blog__articles");
@@ -60,7 +42,7 @@ const months = [
   "Diciembre",
 ];
 if (blogArticles) {
-  fetch("http://localhost:3200/article/getall")
+  fetch("https://admin.dgbdevelopment.com/article/getall")
     .then((result) => result.json())
     .then((data) => {
       renderArticles(data);
@@ -68,6 +50,7 @@ if (blogArticles) {
     .catch((err) => console.log(err));
 }
 
+const blogSelect = document.getElementById("blog__select");
 function renderArticles(data) {
   blogArticles.innerHTML = "";
   let template = `
@@ -81,7 +64,7 @@ function renderArticles(data) {
       template += `
   <div class="article__container">
     <div class="article__top">
-      <div class="article__img"><img src="http://localhost:3200/assets/img/imguploads/${
+      <div class="article__img"><img src="https://admin.dgbdevelopment.com/assets/img/imguploads/${
         article.image
       }"/>
       </div>
@@ -108,16 +91,13 @@ function renderArticles(data) {
 
 const blogArticle = document.getElementById("blog__article");
 if (blogArticle) {
-  console.log(location.search);
   const id = location.search.slice(1);
   let template;
-  console.log(months);
-  fetch("http://localhost:3200/article/getarticle/" + id)
+  fetch("https://admin.dgbdevelopment.com/article/getarticle/" + id)
     .then((result) => result.json())
     .then((data) => {
       const article = data.article;
       const articleDate = new Date(article.createdAt);
-      console.log(article);
       template = `
 <div class="article__header">
   <div class="article__title">
@@ -132,7 +112,7 @@ if (blogArticle) {
       } de ${articleDate.getFullYear()}
 </div>
 <div class="article__img">
-    <img src="http://localhost:3200/assets/img/imguploads/${
+    <img src="https://admin.dgbdevelopment.com/assets/img/imguploads/${
       article.image
     }" alt="Imagen de cabecera de ${article.title}"/>
 </div>
@@ -146,20 +126,51 @@ if (blogArticle) {
 }
 
 const blogForm = document.getElementById("blog__form");
-blogForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const query = blogForm.firstElementChild.value;
+if (blogForm) {
+  blogForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    currentQuery = blogForm.firstElementChild.value;
 
-  fetch("http://localhost:3200/article/searching/" + query)
-    .then((result) => {
-      return result.json();
-    })
+    fetch("https://admin.dgbdevelopment.com/article/searching/" + currentQuery)
+      .then((result) => {
+        return result.json();
+      })
+      .then((data) => {
+        renderArticles(data);
+      })
+      .catch(() => {
+        renderArticles({ message: "Error al buscar en el servidor" });
+      });
+    blogForm.firstElementChild.value = "";
+    blogForm.firstElementChild.blur();
+  });
+}
+
+//Articles Query
+if (blogSelect) {
+  const title = blogSelect.firstElementChild;
+  title.addEventListener("click", function (e) {
+    this.parentElement.classList.toggle("blog__select--expanded");
+  });
+  const order = document.querySelectorAll(".select__option");
+  order.forEach((elem) => {
+    elem.addEventListener("click", () => {
+      doQuery(currentQuery, elem.id);
+      title.firstElementChild.textContent = elem.firstElementChild.textContent;
+      title.parentElement.classList.remove("blog__select--expanded");
+    });
+  });
+}
+function doQuery(query, order) {
+
+  fetch(
+    `https://admin.dgbdevelopment.com/article/ordering/${order}/${query || ""}`
+  )
+    .then((result) => result.json())
     .then((data) => {
       renderArticles(data);
     })
     .catch(() => {
       renderArticles({ message: "Error al buscar en el servidor" });
     });
-  blogForm.firstElementChild.value = "";
-  blogForm.firstElementChild.blur();
-});
+}

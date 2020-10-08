@@ -15,11 +15,11 @@ block main
             #select__title.select__title 
               span Ordenar
               i.fas.fa-angle-down(style="margin-left: auto")
-            .select__option#descendant
-              span Más recientes primero
-            .select__option#ascendant
-              span Más antiguos primero
+            .select__option#descending
+              span(data-query=query || "") Más recientes primero
+            .select__option#ascending
+              span(data-query=query || "") Más antiguos primero
         .blog__search
           form#blog__form.blog__form(action="" method="GET" autocomplete="off")
-            input(type="text", name="article_search" id="article_search" placeholder="⌕" title="Buscar artículo")
+            input(type="text", name="article_search", id="article_search", placeholder="⌕", title="Buscar artículo")
       #blog__articles.blog__articles

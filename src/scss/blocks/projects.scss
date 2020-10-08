@@ -1,17 +1,17 @@
 .projects {
   position: relative;
-  @include bg-grey-gradient;
+  // @include bg-grey-gradient;
   width: 100%;
   min-height: calc(100vh - 4rem);
   padding-top: 3rem;
   overflow: hidden;
-  & span {
-    position: absolute;
-    background: hsl(0%, 100%, 70%);
-    animation: stars 3s ease-in-out;
-    border-radius: 100%;
-    box-shadow: 0 0 3px #d8d8d8, 0 0 10px #d8d8d8;
-  }
+  // & span {
+  //   position: absolute;
+  //   background: hsl(0%, 100%, 70%);
+  //   animation: stars 3s ease-in-out;
+  //   border-radius: 100%;
+  //   box-shadow: 0 0 3px #d8d8d8, 0 0 10px #d8d8d8;
+  // }
 }
 .projects__title {
   position: relative;
@@ -49,6 +49,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  z-index: 10;
 }
 .projects__container .card__container {
   margin: 4rem 1.5rem;

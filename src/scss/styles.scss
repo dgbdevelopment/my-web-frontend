@@ -1,5 +1,5 @@
 @import "mixins/breakpoints";
-@import "mixins/reset-list.scss";
+@import "mixins/reset-list";
 
 @import "config/_colors";
 @import "config/_fonts";
@@ -8,7 +8,7 @@
 @import "base/base";
 @import "base/general";
 
-@import "mixins/neumorphism.scss";
+@import "mixins/neumorphism";
 
 @import "blocks/_buttons";
 
@@ -19,5 +19,6 @@
 @import "blocks/more";
 
 @import "blocks/projects";
-@import "blocks/contact.scss";
-@import "blocks/blog.scss";
+@import "blocks/stars-bg";
+@import "blocks/contact";
+@import "blocks/blog";

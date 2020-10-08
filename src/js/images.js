@@ -32,5 +32,3 @@ import "../assets/img/logos/sass.svg";
 import "../assets/img/logos/unity.svg";
 import "../assets/img/logos/vscode.svg";
 import "../assets/img/logos/webpack.svg";
-
-import "../assets/img/articles/article-img.jpg";
