@@ -30,6 +30,13 @@ if (contactForm) {
     sending = true;
     loader.classList.add("loader--show");
     resultText.textContent = "Enviando...";
+    if (!event.target.email.value || !event.target.message.value) {
+      loader.classList.remove("loader--show");
+      resultText.textContent = "Email y Mensaje son campos obligatorios";
+      resultText.style.color = "red";
+      sending = false;
+      return;
+    }
     fetch(event.target.action, {
       method: "POST",
       body: new URLSearchParams(new FormData(event.target)),

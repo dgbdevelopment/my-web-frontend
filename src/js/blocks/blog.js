@@ -162,7 +162,6 @@ if (blogSelect) {
   });
 }
 function doQuery(query, order) {
-
   fetch(
     `https://admin.dgbdevelopment.com/article/ordering/${order}/${query || ""}`
   )

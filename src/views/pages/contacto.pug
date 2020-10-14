@@ -17,10 +17,10 @@ block main
           span#result-text.result Deja tu mensaje
       form#contact-form.form__content(action="https://admin.dgbdevelopment.com/mail" method="POST" autocomplete="off")
         .form__group
-          input#email.form__input(type="email" name="email" required)
+          input#email.form__input(type="email" name="email")
           label.form__label(for="email") Email
         .form__group
-          textarea#message.form__textarea(name="message" required)
+          textarea#message.form__textarea(name="message")
           label.form__label(for="message") Mensaje
         .form__group
           input#contact-submit.form__submit(type="submit" value="Enviar")
