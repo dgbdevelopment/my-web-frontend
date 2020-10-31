@@ -244,15 +244,6 @@
       text-align: justify;
       line-height: 1.7;
     }
-    & pre {
-      background-color: black;
-      color: #6cf4f1;
-      padding: 0.5em 1.5em;
-      overflow: auto;
-      & span.comment {
-        color: $light-gray;
-      }
-    }
     & ul {
       margin: 0 0 0.5em 0;
       padding-inline-start: 1em;
